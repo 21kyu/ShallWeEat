@@ -1,0 +1,57 @@
+/* Login Title */
+.login_title {
+    position: absolute;
+
+    width: 100%;
+    height: 50%;
+
+    text-align: center;
+    
+    font-size: 25px;
+    
+    color: #000;
+}
+
+.login_outer {
+    display: table;
+
+    width: 100%;
+    height: 100%;
+}
+
+.login_inner {
+    display: table-cell;
+
+    vertical-align: middle;
+}
+
+/* Login Container */
+.login_container {
+    position: absolute;
+    
+    bottom: 0;
+    
+    width: 100%;
+    height: 50%;
+    
+    text-align: center;
+}
+
+#LoginInput {
+    width: 60%;
+    height: 30px;
+    
+    font-size: 15px;
+    
+    text-align: center;
+    
+    border-bottom: 1px solid #000;
+}
+
+#LoginButton {
+    width: 150px;
+    margin: 30px auto 0;
+    
+    font-size: 15px;
+    text-align: center;
+}
