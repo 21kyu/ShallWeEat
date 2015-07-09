@@ -24,7 +24,13 @@ function funcBack() {
         enableScrollMainContainer();
         
         NaviTitle.innerHTML = "홈";
-        hideRegist();
+        
+        if (pageState == 1)
+            hideRegist();
+        else if (pageState == 2)
+            hideRoom();
+        
+        pageState = 0;
         
         setTimeout(function() {
                    var element = document.getElementById("Child" + selectedMainItem);

@@ -9,6 +9,7 @@ hashData["SunDN"] = {"id":"", "day":"일요일", "state":"저녁", "match":"", "
 // var
 var selectedMainItem = "";
 var mainContainerScrollTop = "";
+var pageState = 0; // 1:Regist/Wait , 2:Room
 
 // event
 SunBF.addEventListener("touchstart", touchstartItem);
@@ -78,7 +79,7 @@ function touchendItem() {
                 viewBackButton();
             
                 if (hashData[this.id]["match"] == "match") { // 선택한 아이템이 매치 상태
-                    viewRegist();
+                    viewRoom();
                 } else if (hashData[this.id]["match"] == "wait") { // 대기 상태
                     viewWait();
                 } else { // 비어있는 상태

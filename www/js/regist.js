@@ -9,6 +9,7 @@ RegistButton.addEventListener("touchend", onClickRegistButton);
 
 // func
 function viewRegist() {
+    pageState = 1;
     RegistContainer.style.display = "block";
     
     RegistTitle.innerHTML = "등록하기";
@@ -32,6 +33,7 @@ function viewRegist() {
 }
 
 function viewWait() {
+    pageState = 1;
     RegistContainer.style.display = "block";
     
     RegistTitle.innerHTML = "기다리는 중";
