@@ -15,9 +15,9 @@ function viewBackButton() {
 }
 
 function funcBack() {
-    removeClass(this.id, "touch");
+    if(this.id != null) removeClass(this.id, "touch");
     
-    if (checkAction()) {
+    if (this.id == null || checkAction()) {
         removeClass("NaviBack", "view");
         removeClass(selectedMainItem, "in");
         

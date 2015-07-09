@@ -42,10 +42,21 @@
     height: 30px;
     
     font-size: 15px;
-    
     text-align: center;
     
     border-bottom: 1px solid #000;
+}
+
+#LoginPass {
+    width: 60%;
+    height: 30px;
+    
+    font-size: 15px;
+    text-align: center;
+    
+    border-bottom: 1px solid #000;
+    
+    margin-top: 20px;
 }
 
 #LoginButton {

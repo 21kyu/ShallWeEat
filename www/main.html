@@ -30,6 +30,7 @@
         <link rel="stylesheet" type="text/css" href="css/navi.css" />
         <link rel="stylesheet" type="text/css" href="css/regist.css" />
         <link rel="stylesheet" type="text/css" href="css/match.css" />
+        <link rel="stylesheet" type="text/css" href="css/popup.css" />
         <title>Main View</title>
     </head>
     <body>
@@ -48,11 +49,11 @@
                 <tr> <th></th> <th>아침</th> <th>점심</th> <th>저녁</th> </tr>
                 <tr> <td class="main_home_day">일</td>
                     <td> <div id="SunBF" class="main_home_item"><img id="ChildSunBF" src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item wait">2</div>
-                        <div class="main_home_item_time wait">13:00-14:00</div> </td>
-                    <td> <div class="main_home_item match">3</div>
-                        <div class="main_home_item_time match">18:30-19:00</div> </td>
+                        <div id="SunBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="SunLC" class="main_home_item"><img id="ChildSunLC" src="img/plus.png" width="40"></div>
+                        <div id="SunLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="SunDN" class="main_home_item"><img id="ChildSunDN" src="img/plus.png" width="40"></div>
+                        <div id="SunDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
                 
                 <tr> <td class="main_home_day">월</td>
@@ -108,9 +109,9 @@
         </div>
         
         <div id="RegistContainer">
-            <div id="RegistTitle">일요일 아침</div>
-            <div id="RegistStartTime"> 시작 <input class="regist_time_input" type="time" value="09:00"></div>
-            <div id="RegistEndTime"> 종료 <input class="regist_time_input" type="time" value="10:00"></div>
+            <div id="RegistTitle">등록하기</div>
+            <div id="RegistStartTime"> 시작 <input id="InputStartTime" class="regist_time_input" type="time" value="09:00"></div>
+            <div id="RegistEndTime"> 종료 <input id="InputEndTime" class="regist_time_input" type="time" value="10:00"></div>
             <div id="RegistButtonContainer"><div id="RegistButton" class="nButton">등록</div></div>
         </div>
         
@@ -130,6 +131,29 @@
             </div>
             <div class="matchText">사람을 찾는 중</div>
         </div>
+        
+        <div id="GlobalLoader">
+            <div class="animGLContainer">
+                <div id="AnimGlobalLoader">
+                    <div id="GlobalLoaderRing">
+                        <div class="glBallHolder">
+                            <div class="glBall">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="GlobalPopup">
+            <div class="glWrapper">
+                <div class="PopupWindow">
+                    <div id="PopupIcon">!</div>
+                    <div id="PopupText"></div>
+                    <div id="PBContainer"></div>
+                </div>
+            </div>
+        </div>
 
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/index.js"></script>
@@ -137,5 +161,6 @@
         <script type="text/javascript" src="js/navi.js"></script>
         <script type="text/javascript" src="js/regist.js"></script>
         <script type="text/javascript" src="js/match.js"></script>
+        <script type="text/javascript" src="js/popup.js"></script>
     </body>
 </html>

@@ -53,6 +53,8 @@ var actionInterval = 500;
 var isAction = true;
 var timeoutAction;
 
+// event
+
 // func
 function addClass(curID, name) {
     var element = document.getElementById(curID);
@@ -73,6 +75,21 @@ function removeClass(curID, name) {
     element.className = tempClass;
 }
 
+function findClass(curID, name) {
+    var element = document.getElementById(curID);
+    var splitClass = element.className.split(" ");
+    var splitLength = splitClass.length;
+    var tempClass = "";
+    
+    for (var i=0; i < splitLength; i++) {
+        if (splitClass[i] == name)
+            return true;
+    }
+    
+    return false;
+    
+}
+
 function checkAction() {
     if (isAction) {
         clearTimeout(timeoutAction);
@@ -85,4 +102,33 @@ function checkAction() {
 
 function touchButton() {
     addClass(this.id, "touch");
+}
+
+function showLoader() {
+    GlobalLoader.style.display = "block";
+}
+
+function hideLoader() {
+    GlobalLoader.style.display = "none";
+}
+
+function touchendPopupButton() {
+    if(this.id != null) removeClass(this.id, "touch");
+    removeClass("GlobalPopup", "view");
+}
+
+function showPopup(text, func) {
+    PopupText.innerHTML = text;
+    
+    PBContainer.innerHTML = "<div id='PopupButton' class='pButton'>확인</div>";
+    var PopupButton = document.getElementById('PopupButton');
+    PopupButton.addEventListener('touchstart', touchButton);
+    
+    if (func == null) {
+        PopupButton.addEventListener('touchend', touchendPopupButton);
+    } else {
+        PopupButton.addEventListener('touchend', func);
+    }
+    
+    addClass("GlobalPopup", "view");
 }
