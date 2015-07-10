@@ -58,7 +58,8 @@ var timeoutAction;
 // func
 function addClass(curID, name) {
     var element = document.getElementById(curID);
-    element.className = element.className + " " + name;
+    if (!findClass(curID, name))
+        element.className = element.className + " " + name;
 }
 
 function removeClass(curID, name) {

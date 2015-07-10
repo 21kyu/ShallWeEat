@@ -1,0 +1,196 @@
+#ChatContainer {
+    position: fixed;
+    display: none;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    z-index: 101;
+}
+
+#ChatBox {
+    position: absolute;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    background: #00B8FE;
+    
+    -webkit-transform: translate3d(100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.3s;
+}
+
+#ChatBox.view {
+    -webkit-transform: translate3d(0, 0, 0);
+}
+
+.chat_navigator {
+    position: fixed;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 65px;
+    
+    z-index: 10;
+    
+    background: RGBA(0, 184, 254, 0.8);
+}
+
+.chat_navigator_container {
+    margin-top: 20px;
+    
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    
+    text-align: center;
+}
+
+#ChatTitle {
+    color: #FFF;
+}
+
+#ExitChat {
+    position: absolute;
+    
+    top: 20px;
+    left: 15px;
+    
+    height: 45px;
+    line-height: 45px;
+    color: #FFF;
+}
+
+.chatTopSpace {
+    width: 100%;
+    height: 65px;
+}
+.chatBottomSpace {
+    width: 100%;
+    height: 60px;
+}
+
+#ChatBody {
+    width: 100%;
+    height: 100%;
+    
+    overflow: scroll;
+}
+
+.chatMessageLine {
+    width: 100%;
+    padding: 10px 0;
+    background: #00B8FE;
+}
+.chatMessageLine.continue {
+    padding: 0 0 10px;
+}
+
+.chatPicture {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: #FFF;
+    margin: 0 10px 0 10px;
+}
+.chatPicture.continue {
+    background: #00B8FE;
+}
+
+.chatTextBox.chatRight {
+    margin-right: 10px;
+}
+
+.chatName.me {
+    text-align: right;
+}
+
+.chatText {
+    max-width: 150px;
+    margin-top: 5px;
+    padding: 10px;
+    background: #FFF;
+    font-size: 16px;
+    word-break: break-word;
+}
+.chatText.continue  {
+    margin-top: 0px;
+}
+
+.chatTime {
+    margin-top: 25px;
+    margin-left: 5px;
+}
+.chatTime.chatRight {
+    margin-right: 5px;
+}
+.chatTime.continue {
+    margin-top: 5px;
+}
+
+.chatLeft {
+    float: left;
+}
+.chatRight {
+    float: right;
+}
+
+.chatInputBox {
+    position: fixed;
+    
+    bottom: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 60px;
+    
+     z-index: 5;
+    
+    background: #ECECEC;
+}
+
+#ChatInput {
+    position: absolute;
+    
+    left: 10px;
+    right: 80px;
+    bottom: 10px;
+    text-indent: 10px;
+    font-size: 17px;
+    
+    height: 40px;
+}
+
+#ChatSend {
+    position: absolute;
+    
+    right: 10px;
+    bottom: 10px;
+    
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFF;
+    background: #AEAEAE;
+    
+    -webkit-transition: background 0.3s;
+}
+
+#ChatSend.sendEnable {
+    background: #00B8FE;
+}
+
+#ChatSend.sendEnable.touch {
+    color: #AEAEAE;
+    background: #FFF;
+}

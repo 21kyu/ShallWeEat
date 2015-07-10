@@ -26,7 +26,7 @@ function initMain() {
     // TODO
     // 여기에 서버로부터 데이터를 받아서 hashData에 저장하는 로직 필요
     hashData["SunLC"] = {"id":"", "day":"일요일", "state":"점심", "match":"wait", "stime":"13:00", "etime":"14:00", "count":"W"};
-    hashData["SunDN"] = {"id":"", "day":"일요일", "state":"저녁", "match":"match", "stime":"18:00", "etime":"19:00", "count":"3"};
+    hashData["SunDN"] = {"id":"1005", "day":"일요일", "state":"저녁", "match":"match", "stime":"18:00", "etime":"19:00", "count":"5"};
     
     setTimeout(function() {
                setMainItem("SunBF");
@@ -54,6 +54,11 @@ function setMainItem(_id) {
         addClass(tID + "Time", "wait");
         tEl.innerHTML = "<div id='Child" + tID + "'>" + hashData[tID]["count"] + "</div>";
         tElTime.innerHTML = hashData[tID]["stime"] + "-" + hashData[tID]["etime"];
+    } else {
+        tEl.className = "main_home_item";
+        tElTime.className = "main_home_item_time";
+        tEl.innerHTML = "<img id='Child" + tID + "' src='img/plus.png' width='40'>";
+        tElTime.innerHTML = "비어있어요";
     }
 }
 

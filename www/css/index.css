@@ -20,6 +20,10 @@
     -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
 }
 
+html {
+    overflow-x: hidden;
+}
+
 body {
     -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
     -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
@@ -32,6 +36,8 @@ body {
     margin:0px;
     padding:0px;
     width:100%;
+    
+    overflow-x: hidden;
 }
 
 input {
@@ -59,7 +65,10 @@ input {
     color: #C5C5C5;
     -webkit-transition: color 0.3s;
 }
-.tButton.touch, .nButton.touch {
+.fButton {
+    -webkit-transition: color 0.3s;
+}
+.tButton.touch, .nButton.touch, .fButton.touch {
     color: #ECECEC;
 }
 .pButton.touch {

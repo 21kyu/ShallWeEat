@@ -31,6 +31,7 @@
         <link rel="stylesheet" type="text/css" href="css/regist.css" />
         <link rel="stylesheet" type="text/css" href="css/match.css" />
         <link rel="stylesheet" type="text/css" href="css/room.css" />
+        <link rel="stylesheet" type="text/css" href="css/chat.css" />
         <link rel="stylesheet" type="text/css" href="css/popup.css" />
         <title>Main View</title>
     </head>
@@ -131,7 +132,7 @@
                 </div>
                 <div class="roomMemberLine">
                     <div class="roomMemberImage"><img src="img/face_3.png" height="30"></div>
-                    <div class="roomMemberText">'06 김상헌</div>
+                    <div class="roomMemberText">'15 김상헌</div>
                     <div class="clearboth"></div>
                 </div>
                 <div class="roomMemberLine">
@@ -146,7 +147,91 @@
                 </div>
             </div>
             <div id="RoomBottom">
-                <div id="RoomTalkButton">대화하기</div><div id="RoomLeaveButton">나가기</div>
+                <div id="RoomTalkButton" class="fButton">대화하기</div>
+                <div id="RoomLeaveButton" class="fButton">떠나기</div>
+            </div>
+        </div>
+        
+        <div id="ChatContainer">
+            <div id="ChatBox">
+                <div class="chat_navigator">
+                    <div class="chat_navigator_container">
+                        <div id="ChatTitle" class="main_navigator_container_text">타이틀</div>
+                        <div id="ExitChat" class="tButton">뒤로가기</div>
+                    </div>
+                </div>
+                
+                <div id="ChatBody">
+                    <div class="chatTopSpace"></div>
+                    
+                    <div id="ChatHistory">
+                        
+                        <div class="chatMessageLine">
+                            <div class="chatPicture chatLeft"><img src="img/face_2.png" height="30"></div>
+                            <div class="chatTextBox chatLeft">
+                                <div class="chatName">'11 현미림</div>
+                                <div class="chatText">안녕하세요!</div>
+                            </div>
+                            <div class="chatTime chatLeft">오후 1:03</div>
+                            <div class="clearboth"></div>
+                        </div>
+                    
+                        <div class="chatMessageLine">
+                            <div class="chatPicture chatLeft"><img src="img/face_4.png" height="30"></div>
+                            <div class="chatTextBox chatLeft">
+                                <div class="chatName">'13 임승민</div>
+                                <div class="chatText">안녕하세요 반갑습니다. 하하하헣 길게 한번 쳐볼게요 잘 나오는지 아엥;ㅣㅇ오ㅓㅓㄴ맏러아에이아 호호호<br>123123123464 aewdfasfaefsadfa sdfawe</div>
+                            </div>
+                            <div class="chatTime chatLeft">오후 1:07</div>
+                            <div class="clearboth"></div>
+                        </div>
+                        
+                        <div class="chatMessageLine continue">
+                            <div class="chatPicture chatLeft continue"></div>
+                            <div class="chatTextBox chatLeft">
+                                <div class="chatText continue">^^</div>
+                            </div>
+                            <div class="chatTime chatLeft continue">오후 1:07</div>
+                            <div class="clearboth"></div>
+                        </div>
+                    
+                        <div class="chatMessageLine">
+                            <div class="chatPicture chatLeft"><img src="img/face_5.png" height="30"></div>
+                            <div class="chatTextBox chatLeft">
+                                <div class="chatName">'00 화석</div>
+                                <div class="chatText">저는 화석입니다. :)<br>다들 어리시네요.. ㅠㅠ</div>
+                            </div>
+                            <div class="chatTime chatLeft">오후 1:08</div>
+                            <div class="clearboth"></div>
+                        </div>
+                    
+                        <div class="chatMessageLine">
+                            <div class="chatTextBox chatRight">
+                                <div class="chatName me">나</div>
+                                <div class="chatText">헤헤헤헤</div>
+                            </div>
+                            <div class="chatTime chatRight">오후 1:09</div>
+                            <div class="clearboth"></div>
+                        </div>
+                    
+                        <div class="chatMessageLine">
+                            <div class="chatPicture chatLeft"><img src="img/face_2.png" height="30"></div>
+                            <div class="chatTextBox chatLeft">
+                                <div class="chatName">'11 현미림</div>
+                                <div class="chatText">ㅎㅎㅎ</div>
+                            </div>
+                            <div class="chatTime chatLeft">오후 1:11</div>
+                            <div class="clearboth"></div>
+                        </div>
+                    </div>
+                        
+                    <div class="chatBottomSpace"></div>
+                </div>
+                
+                <div class="chatInputBox">
+                    <input id="ChatInput" type="text"  disabled />
+                    <div id="ChatSend">보내기</div>
+                </div>
             </div>
         </div>
         
@@ -197,6 +282,7 @@
         <script type="text/javascript" src="js/regist.js"></script>
         <script type="text/javascript" src="js/match.js"></script>
         <script type="text/javascript" src="js/room.js"></script>
+        <script type="text/javascript" src="js/chat.js"></script>
         <script type="text/javascript" src="js/popup.js"></script>
     </body>
 </html>
