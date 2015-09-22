@@ -32,6 +32,7 @@
         <link rel="stylesheet" type="text/css" href="css/match.css" />
         <link rel="stylesheet" type="text/css" href="css/room.css" />
         <link rel="stylesheet" type="text/css" href="css/chat.css" />
+        <link rel="stylesheet" type="text/css" href="css/notice.css" />
         <link rel="stylesheet" type="text/css" href="css/popup.css" />
         <title>Main View</title>
     </head>
@@ -49,7 +50,7 @@
             <div class="main_home_top_space"></div>
             <table>
                 <tr> <th></th> <th>아침</th> <th>점심</th> <th>저녁</th> </tr>
-                <tr> <td class="main_home_day">일</td>
+                <tr> <td class="main_home_day sunColor">일</td>
                     <td> <div id="SunBF" class="main_home_item"><img id="ChildSunBF" src="img/plus.png" width="40"></div>
                         <div id="SunBFTime" class="main_home_item_time">비어있어요</div> </td>
                     <td> <div id="SunLC" class="main_home_item"><img id="ChildSunLC" src="img/plus.png" width="40"></div>
@@ -59,52 +60,52 @@
                 </tr>
                 
                 <tr> <td class="main_home_day">월</td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="MonBF" class="main_home_item"><img id="ChildMonBF" src="img/plus.png" width="40"></div>
+                        <div id="MonBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="MonLC" class="main_home_item"><img id="ChildMonLC" src="img/plus.png" width="40"></div>
+                        <div id="MonLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="MonDN" class="main_home_item"><img id="ChildMonDN" src="img/plus.png" width="40"></div>
+                        <div id="MonDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
                 <tr> <td class="main_home_day">화</td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="TueBF" class="main_home_item"><img id="ChildTueBF" src="img/plus.png" width="40"></div>
+                        <div id="TueBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="TueLC" class="main_home_item"><img id="ChildTueLC" src="img/plus.png" width="40"></div>
+                        <div id="TueLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="TueDN" class="main_home_item"><img id="ChildTueDN" src="img/plus.png" width="40"></div>
+                        <div id="TueDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
                 <tr> <td class="main_home_day">수</td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="WedBF" class="main_home_item"><img id="ChildWedBF" src="img/plus.png" width="40"></div>
+                        <div id="WedBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="WedLC" class="main_home_item"><img id="ChildWedLC" src="img/plus.png" width="40"></div>
+                        <div id="WedLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="WedDN" class="main_home_item"><img id="ChildWedDN" src="img/plus.png" width="40"></div>
+                        <div id="WedDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
                 <tr> <td class="main_home_day">목</td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="ThuBF" class="main_home_item"><img id="ChildThuBF" src="img/plus.png" width="40"></div>
+                        <div id="ThuBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="ThuLC" class="main_home_item"><img id="ChildThuLC" src="img/plus.png" width="40"></div>
+                        <div id="ThuLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="ThuDN" class="main_home_item"><img id="ChildThuDN" src="img/plus.png" width="40"></div>
+                        <div id="ThuDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
                 <tr> <td class="main_home_day">금</td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="FriBF" class="main_home_item"><img id="ChildFriBF" src="img/plus.png" width="40"></div>
+                        <div id="FriBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="FriLC" class="main_home_item"><img id="ChildFriLC" src="img/plus.png" width="40"></div>
+                        <div id="FriLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="FriDN" class="main_home_item"><img id="ChildFriDN" src="img/plus.png" width="40"></div>
+                        <div id="FriDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
-                <tr> <td class="main_home_day">토</td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
-                    <td> <div class="main_home_item"><img src="img/plus.png" width="40"></div>
-                        <div class="main_home_item_time">비어있어요</div> </td>
+                <tr> <td class="main_home_day satColor">토</td>
+                    <td> <div id="SatBF" class="main_home_item"><img id="ChildSatBF" src="img/plus.png" width="40"></div>
+                        <div id="SatBFTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="SatLC" class="main_home_item"><img id="ChildSatLC" src="img/plus.png" width="40"></div>
+                        <div id="SatLCTime" class="main_home_item_time">비어있어요</div> </td>
+                    <td> <div id="SatDN" class="main_home_item"><img id="ChildSatDN" src="img/plus.png" width="40"></div>
+                        <div id="SatDNTime" class="main_home_item_time">비어있어요</div> </td>
                 </tr>
                 
             </table>
@@ -112,9 +113,9 @@
         
         <div id="RegistContainer">
             <div id="RegistTitle">등록하기</div>
-            <div id="RegistStartTime"> 시작 <input id="InputStartTime" class="regist_time_input" type="time" value="09:00"></div>
-            <div id="RegistEndTime"> 종료 <input id="InputEndTime" class="regist_time_input" type="time" value="10:00"></div>
-            <div id="RegistButtonContainer"><div id="RegistButton" class="nButton">등록</div></div>
+            <div id="RegistStartTime"> 시작 <input id="InputStartTime" class="regist_time_input" type="time"></div>
+            <div id="RegistEndTime"> 종료 <input id="InputEndTime" class="regist_time_input" type="time"></div>
+            <div id="RegistButtonContainer"><div id="RegistButton" class="nButton defaultColor">등록</div></div>
         </div>
         
         <div id="RoomContainer">
@@ -147,8 +148,8 @@
                 </div>
             </div>
             <div id="RoomBottom">
-                <div id="RoomTalkButton" class="fButton">대화하기</div>
-                <div id="RoomLeaveButton" class="fButton">떠나기</div>
+                <div id="RoomTalkButton" class="fButton defaultColor">대화하기</div>
+                <div id="RoomLeaveButton" class="fButton defaultColor">떠나기</div>
             </div>
         </div>
         
@@ -165,7 +166,7 @@
                     <div class="chatTopSpace"></div>
                     
                     <div id="ChatHistory">
-                        
+                        <!--
                         <div class="chatMessageLine">
                             <div class="chatPicture chatLeft"><img src="img/face_2.png" height="30"></div>
                             <div class="chatTextBox chatLeft">
@@ -223,6 +224,7 @@
                             <div class="chatTime chatLeft">오후 1:11</div>
                             <div class="clearboth"></div>
                         </div>
+                         -->
                     </div>
                         
                     <div class="chatBottomSpace"></div>
@@ -236,20 +238,69 @@
         </div>
         
         <div id="MatchContainer">
-            <div id="CancelMatch" class="tButton">취소</div>
-            <div class="matchLoaderContainer">
-                <div id="MatchLoader">
-                    <div id="MatchLoaderItem1" class="matchLoader"></div>
-                    <div id="MatchLoaderItem2" class="matchLoader"></div>
-                    <div id="MatchLoaderItem3" class="matchLoader"></div>
-                    <div id="MatchLoaderItem4" class="matchLoader"></div>
-                    <div id="MatchLoaderItem5" class="matchLoader"></div>
-                    <div id="MatchLoaderItem6" class="matchLoader"></div>
-                    <div id="MatchLoaderItem7" class="matchLoader"></div>
-                    <div id="MatchLoaderItem8" class="matchLoader"></div>
+            <div id="MatchBody">
+                <div id="CancelMatch" class="tButton">취소</div>
+                <div class="matchLoaderContainer">
+                    <div id="MatchLoader">
+                        <div id="MatchLoaderItem1" class="matchLoader"></div>
+                        <div id="MatchLoaderItem2" class="matchLoader"></div>
+                        <div id="MatchLoaderItem3" class="matchLoader"></div>
+                        <div id="MatchLoaderItem4" class="matchLoader"></div>
+                        <div id="MatchLoaderItem5" class="matchLoader"></div>
+                        <div id="MatchLoaderItem6" class="matchLoader"></div>
+                        <div id="MatchLoaderItem7" class="matchLoader"></div>
+                        <div id="MatchLoaderItem8" class="matchLoader"></div>
+                    </div>
+                </div>
+                <div class="matchText">사람을 찾는 중</div>
+            </div>
+        </div>
+        
+        <div id="NoticePopup">
+            <div id="NoticeBody">
+                
+                <div id="Start1">
+                    <div class="noticeTitle"><p class="noticeTitleText">Shall<br>We<br>Eat</p></div>
+                    <div class="noticeText">안녕하세요, 반갑습니다!<br><br>매끈하고 원활한 진행을 위해 필요한 3가지 정보를 입력해 주세요.</div>
+                    <div id="NoticeFotter">
+                        <div id="NoticeStart1Next" class="noticeButton defaultColor fButton">다음</div>
+                    </div>
+                </div>
+                
+                <div id="Start2">
+                    <div class="noticeTopSpace"></div>
+                    <div class="noticeLine">
+                        <select id="MajorSelect">
+                            <option value="0">전공 선택</option>
+                            <option value="컴퓨터 공학">컴퓨터 공학</option>
+                            <option value="전자 공학">전자 공학</option>
+                            <option value="기계 공학">기계 공학</option>
+                        </select>
+                    </div>
+                    <div class="noticeLine">
+                        <select id="LocationSelect">
+                            <option value="0">거주지 선택</option>
+                            <option value="1">통학 버스 통학</option>
+                            <option value="2">구미 버스 통학</option>
+                            <option value="3">학교 앞 자취</option>
+                            <option value="4">옥계 자취</option>
+                            <option value="5">푸름관</option>
+                            <option value="6">오름관</option>
+                        </select>
+                    </div>
+                    <div class="noticeLine">
+                        <select id="GenderSelect">
+                            <option value="0">성별</option>
+                            <option value="f">여학우</option>
+                            <option value="m">남학우</option>
+                        </select>
+                    </div>
+                    <div id="Logout" class="noticeLine">로그아웃</div>
+                    <div id="NoticeFotter">
+                        <div id="NoticeStart2Next" class="noticeButton defaultColor fButton">확인</div>
+                    </div>
                 </div>
             </div>
-            <div class="matchText">사람을 찾는 중</div>
         </div>
         
         <div id="GlobalLoader">
@@ -283,6 +334,7 @@
         <script type="text/javascript" src="js/match.js"></script>
         <script type="text/javascript" src="js/room.js"></script>
         <script type="text/javascript" src="js/chat.js"></script>
+        <script type="text/javascript" src="js/notice.js"></script>
         <script type="text/javascript" src="js/popup.js"></script>
     </body>
 </html>

@@ -63,13 +63,19 @@
     color: #AEAEAE;
 }
 .main_home_item.match {
-    border: 1px solid #000;
+    border: 1px solid #0072A5;
+    background: #0072A5;
+    color: #FFF;;
 }
 .main_home_item.start {
     background: #AEAEAE;
 }
+.main_home_item.match.start {
+    background: #AACFE1;
+}
 .main_home_item.in {
     -webkit-transform: scale3d(30, 30, 1);
+    background: #FFF;
 }
 
 .main_home_item > img {
@@ -86,5 +92,5 @@
     color: #AEAEAE;
 }
 .main_home_item_time.match {
-    color: #000;
+    color: #0072A5;
 }

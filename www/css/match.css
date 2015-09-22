@@ -1,6 +1,20 @@
 #MatchContainer {
-    position: absolute;
+    position: fixed;
     display: none;
+    
+    top: 0;
+    left: 0;
+    
+    width: 100%;
+    height: 100%;
+    
+    overflow: hidden;
+    
+    z-index: 101;
+}
+
+#MatchBody {
+    position: absolute;
     
     top: 0;
     left: 0;
@@ -12,13 +26,12 @@
     color: #FFF;
     
     overflow: hidden;
-    z-index: 101;
     
     -webkit-transform: translate3d(0, 100%, 0);
     -webkit-transition: -webkit-transform 0.4s;
 }
 
-#MatchContainer.view {
+#MatchBody.view {
     -webkit-transform: translate3d(0, 0, 0);
 }
 

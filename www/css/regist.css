@@ -1,5 +1,5 @@
 #RegistContainer {
-    position: absolute;
+    position: fixed;
     display: none;
     
     top: 0;
@@ -73,6 +73,10 @@
     padding-bottom: 5px;
     margin: 30px 0 30px 30px;
 }
+.regist_time_input:focus {
+    border-bottom: 1px solid #0072A5;
+    color: #0072A5;
+}
 
 #RegistButtonContainer {
     position: absolute;
@@ -95,4 +99,5 @@
 #RegistButton {
     width: 150px;
     margin: 0 auto;
+    font-size: 18px;
 }

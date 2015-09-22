@@ -89,6 +89,8 @@
     [self.window makeKeyAndVisible];
     
     self.viewController.webView.scrollView.bounces = NO;
+    
+    [NSThread sleepForTimeInterval:2];
 
     return YES;
 }

@@ -15,13 +15,13 @@ function viewRegist() {
     RegistTitle.innerHTML = "등록하기";
     RegistButton.innerHTML = "등록";
     
-    if (hashData[selectedMainItem]["state"] == "아침") {
+    if (hashData[selectedMainItem]["state"] == "BF") {
         InputStartTime.value = "08:00";
         InputEndTime.value = "09:00";
-    } else if (hashData[selectedMainItem]["state"] == "점심") {
+    } else if (hashData[selectedMainItem]["state"] == "LC") {
         InputStartTime.value = "13:00";
         InputEndTime.value = "14:00";
-    } else if (hashData[selectedMainItem]["state"] == "저녁") {
+    } else if (hashData[selectedMainItem]["state"] == "DN") {
         InputStartTime.value = "18:00";
         InputEndTime.value = "19:00";
     }
@@ -39,8 +39,8 @@ function viewWait() {
     RegistTitle.innerHTML = "기다리는 중";
     RegistButton.innerHTML = "수정";
     
-    InputStartTime.value = hashData[selectedMainItem]["stime"] ;
-    InputEndTime.value = hashData[selectedMainItem]["etime"] ;
+    InputStartTime.value = getTimeTypeForWait(hashData[selectedMainItem]["stime"]);
+    InputEndTime.value = getTimeTypeForWait(hashData[selectedMainItem]["etime"]);
     
     setTimeout(function() { addClass("RegistTitle", "view"); }, 300);
     setTimeout(function() { addClass("RegistStartTime", "view"); }, 400);

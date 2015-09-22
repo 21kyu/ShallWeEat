@@ -44,5 +44,6 @@ function funcSetting() {
     removeClass(this.id, "touch");
     
     if (checkAction()) {
+        viewSetting();
     }
 }

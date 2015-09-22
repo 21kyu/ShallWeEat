@@ -52,6 +52,7 @@ var app = {
 var actionInterval = 500;
 var isAction = true;
 var timeoutAction;
+var serverURL = "http://52.68.241.16:8080/";
 
 // event
 
@@ -88,7 +89,6 @@ function findClass(curID, name) {
     }
     
     return false;
-    
 }
 
 function checkAction() {
@@ -132,4 +132,74 @@ function showPopup(text, func) {
     }
     
     addClass("GlobalPopup", "view");
+}
+
+// Ajax
+function ajaxCall(url, param, successCallback, errorCallback) {
+    var xhr;
+    
+    try {
+    
+    if (window.XMLHttpRequest)
+        xhr = new XMLHttpRequest();
+    
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                //alert(xhr.responseText);
+                
+                successCallback(trim(xhr.responseText));
+            } else {
+                if (errorCallback)
+                    errorCallback();
+                else
+                    alert("ERROR " + xhr.status + " " + xhr.statusText + " " + xhr.responseXML);
+            }
+        }
+    }
+    
+    xhr.open('POST', url, true);
+    xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhr.send(param);
+        
+    } catch (e) {
+        alert(e.message);
+    }
+}
+
+// 앞뒤 공백문자열을 제거
+function trim(str) {
+    return str.replace(/(^\s*)|(\s*$)/gi, "");
+}
+
+// html5 Storage
+function setLocalData(key, value) {
+    localStorage.setItem(key, value);
+}
+
+function getLocalData(key) {
+    return localStorage.getItem(key);
+}
+
+function getNumberOnly(value){
+    var regex = /[^0-9]/g;
+    return Number(value.replace(regex, ''));
+}
+
+function getTimeType(value) {
+    var val = value.toString();
+    if (val.length == 3) {
+        return val.substr(0,1) + ":" + val.substr(1,2);
+    } else {
+        return val.substr(0,2) + ":" + val.substr(2,2);
+    }
+}
+
+function getTimeTypeForWait(value) {
+    var val = value.toString();
+    if (val.length == 3) {
+        return "0" + val.substr(0,1) + ":" + val.substr(1,2);
+    } else {
+        return val.substr(0,2) + ":" + val.substr(2,2);
+    }
 }

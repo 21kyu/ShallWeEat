@@ -10,8 +10,9 @@
     
     z-index: 100;
 
-    background: #FFF;
-    border-bottom: 1px solid #000;
+    background: #0072A5;
+    color: #FFF;
+    border-bottom: 1px solid #0072A5;
 }
 
 .main_navigator_container {
@@ -26,7 +27,7 @@
 
 .main_navigator_container_text {
     font-size: 20px;
-    color: #000;
+    color: #FFF;
 }
 
 .main_navigator_container_back {

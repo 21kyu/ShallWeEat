@@ -1,5 +1,5 @@
 #RoomContainer {
-    position: absolute;
+    position: fixed;
     display: none;
     
     top: 0;
@@ -12,12 +12,13 @@
 }
 
 #RoomMemberCount {
-    width: 100%;
+    width: 95%;
     height: 30px;
     font-size: 17px;
-    margin: 85px 0 10px;
+    margin: 85px 5% 10px 0;
     
     text-indent: 15px;
+    text-align: right;
     
     -webkit-transform: translate3d(100%, 0, 0);
     -webkit-transition: -webkit-transform 0.5s;
@@ -30,21 +31,43 @@
     width: 100%;
     margin: 0 0 50px;
     
+    border-top: 1px solid #0072A5;
+    
     -webkit-transform: translate3d(100%, 0, 0);
     -webkit-transition: -webkit-transform 0.5s;
 }
 #RoomMemberContainer.view {
+    border-top: 1px solid #AEAEAE;
     -webkit-transform: translate3d(0, 0, 0);
 }
 
-.roomMemberLine {
+#RoomMemberContainer > .roomMemberLine {
     width: 100%;
     height: 30px;
-    margin: 10px 0;
-    padding: 5px 0;
+    padding: 7px 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid #0072A5;
+    color: #FFF;
+}
+#RoomMemberContainer.view > .roomMemberLine {
+    width: 100%;
+    height: 30px;
+    padding: 7px 0;
+    background: #FFF;
+    border-bottom: 1px solid #AEAEAE;
+    color: #000;
 }
 
-.roomMemberImage {
+#RoomMemberContainer .roomMemberImage {
+    float: left;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    border-radius: 15px;
+    background: #FFF;
+    margin: 0 10px 0 20px;
+}
+#RoomMemberContainer.view .roomMemberImage {
     float: left;
     width: 30px;
     height: 30px;
@@ -70,8 +93,7 @@
     width: 100%;
     height: 60px;
     
-    background: #FFF;
-    opacity: 0.8;
+    background: rgba(255, 255, 255, 0.1);
     
     -webkit-transform: translate3d(100%, 0, 0);
     -webkit-transition: -webkit-transform 0.5s;
