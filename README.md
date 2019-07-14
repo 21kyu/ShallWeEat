@@ -1,2 +1,3 @@
 # ShallWeEat
-App
+
+Meal matching hybrid application created using the Phonegap framework
