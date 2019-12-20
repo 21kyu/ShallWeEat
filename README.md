@@ -1,6 +1,6 @@
 # ShallWeEat
 
-Hybrid application to help find someone to eat together
+Hybrid application to find someone to eat lunch together
 
 - platform: iOS
 - language: html/css/js & objective-c
